@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+# Local override of al_folio_core's assets/css/main.scss — configures the
+# light-theme accent ($purple-color) to a blue instead of the default magenta.
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure design tokens BEFORE loading any partials. */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }},
+  $purple-color: #0076df
+);
+
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
