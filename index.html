@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhibo He</title>
+<meta name="description" content="Personal academic homepage of Zhibo He.">
+<style>
+  :root{
+    --ink:#1a1a1a; --muted:#666; --line:#e6e6e6;
+    --accent:#8b1a1a; --bg:#fff; --soft:#fafafa;
+    --maxw:820px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.65; font-size:17px;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+  /* Nav */
+  nav{
+    position:sticky; top:0; z-index:10; background:rgba(255,255,255,.92);
+    backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:56px}
+  nav .brand{font-weight:bold; letter-spacing:.02em}
+  nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0;
+    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:14px}
+  nav a{color:var(--ink)}
+
+  /* Header */
+  header{padding:56px 0 40px}
+  .hero{display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap}
+  .avatar{
+    width:150px; height:150px; border-radius:8px; object-fit:cover;
+    background:var(--soft); border:1px solid var(--line); flex:0 0 auto;
+    display:flex; align-items:center; justify-content:center; color:var(--muted);
+    font-family:-apple-system,Segoe UI,sans-serif; font-size:13px; text-align:center;
+  }
+  .hero-info{flex:1; min-width:260px}
+  h1{margin:0 0 6px; font-size:34px; letter-spacing:.01em}
+  .role{color:var(--muted); margin:0 0 14px; font-size:18px}
+  .contact-line{
+    font-family:-apple-system,Segoe UI,sans-serif; font-size:14px;
+    color:var(--muted); display:flex; flex-wrap:wrap; gap:14px;
+  }
+
+  section{padding:34px 0; border-top:1px solid var(--line)}
+  h2{font-size:14px; text-transform:uppercase; letter-spacing:.12em;
+     color:var(--accent); margin:0 0 18px;
+     font-family:-apple-system,Segoe UI,sans-serif; font-weight:600}
+  p{margin:0 0 14px}
+
+  /* News */
+  .news{list-style:none; margin:0; padding:0}
+  .news li{display:flex; gap:16px; padding:8px 0; border-bottom:1px dotted var(--line)}
+  .news li:last-child{border-bottom:none}
+  .news .date{flex:0 0 92px; color:var(--muted); font-family:-apple-system,Segoe UI,sans-serif;
+    font-size:13px; padding-top:2px}
+
+  /* Publications */
+  .pub{display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--line)}
+  .pub:last-child{border-bottom:none}
+  .pub .thumb{flex:0 0 120px; height:76px; border:1px solid var(--line); border-radius:6px;
+    background:var(--soft); display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:12px; font-family:-apple-system,Segoe UI,sans-serif}
+  .pub-body{flex:1}
+  .pub .ptitle{font-weight:bold}
+  .pub .authors{font-size:15px; color:#333}
+  .pub .authors .me{border-bottom:2px solid var(--accent)}
+  .pub .venue{font-style:italic; color:var(--muted); font-size:15px}
+  .pub .links{margin-top:6px; font-family:-apple-system,Segoe UI,sans-serif; font-size:13px;
+    display:flex; gap:12px; flex-wrap:wrap}
+  .pub .links a{padding:1px 8px; border:1px solid var(--line); border-radius:4px; color:var(--accent)}
+
+  /* CV */
+  .cv-item{display:flex; gap:16px; padding:10px 0}
+  .cv-item .yr{flex:0 0 120px; color:var(--muted);
+    font-family:-apple-system,Segoe UI,sans-serif; font-size:14px}
+  .cv-item .what b{display:block}
+  .cv-item .what span{color:var(--muted); font-size:15px}
+
+  footer{padding:40px 0 60px; color:var(--muted);
+    font-family:-apple-system,Segoe UI,sans-serif; font-size:13px; text-align:center;
+    border-top:1px solid var(--line)}
+
+  @media (max-width:560px){
+    body{font-size:16px}
+    h1{font-size:28px}
+    .pub .thumb,.news .date{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Zhibo He</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header id="about">
+    <div class="hero">
+      <!-- Replace with: <img class="avatar" src="photo.jpg" alt="Zhibo He"> -->
+      <div class="avatar">photo.jpg</div>
+      <div class="hero-info">
+        <h1>Zhibo He</h1>
+        <p class="role">Ph.D. Student, [Department] &middot; [University]</p>
+        <div class="contact-line">
+          <span>&#9993; <a href="mailto:zhiboheee@gmail.com">zhiboheee@gmail.com</a></span>
+          <span>&#128205; [City, Country]</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:28px">
+      I am a Ph.D. student at [University], where I work on [your research area].
+      My research focuses on [one or two sentences describing your core research questions
+      and why they matter]. Previously, I received my [degree] from [institution].
+    </p>
+    <p>
+      I am broadly interested in [interest 1], [interest 2], and [interest 3].
+      I am currently looking for [collaborations / internships / etc.] &mdash; feel free to reach out.
+    </p>
+  </header>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><span class="date">Jul 2026</span><span>New paper accepted at [Venue]. &#127881;</span></li>
+      <li><span class="date">May 2026</span><span>Started as a research intern at [Lab / Company].</span></li>
+      <li><span class="date">Jan 2026</span><span>Gave a talk on [topic] at [event].</span></li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub">
+      <div class="thumb">figure</div>
+      <div class="pub-body">
+        <div class="ptitle">Title of Your First Paper Goes Here</div>
+        <div class="authors"><span class="me">Zhibo He</span>, Co-author A, Co-author B</div>
+        <div class="venue">Conference / Journal Name, 2026</div>
+        <div class="links">
+          <a href="#">PDF</a><a href="#">arXiv</a><a href="#">Code</a><a href="#">BibTeX</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="thumb">figure</div>
+      <div class="pub-body">
+        <div class="ptitle">Title of Your Second Paper Goes Here</div>
+        <div class="authors">Co-author A, <span class="me">Zhibo He</span>, Co-author C</div>
+        <div class="venue">Conference / Journal Name, 2025</div>
+        <div class="links">
+          <a href="#">PDF</a><a href="#">arXiv</a><a href="#">Code</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="cv">
+    <h2>Education &amp; Experience</h2>
+    <div class="cv-item">
+      <div class="yr">2024 &ndash; now</div>
+      <div class="what"><b>Ph.D. in [Field]</b><span>[University]</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="yr">2020 &ndash; 2024</div>
+      <div class="what"><b>B.S. in [Field]</b><span>[University]</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="yr">Summer 2025</div>
+      <div class="what"><b>Research Intern</b><span>[Lab / Company]</span></div>
+    </div>
+    <p style="margin-top:18px">
+      <a href="cv.pdf">&#8595; Download full CV (PDF)</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email is the best way to reach me:
+      <a href="mailto:zhiboheee@gmail.com">zhiboheee@gmail.com</a>.
+    </p>
+    <div class="contact-line" style="font-size:14px">
+      <a href="#">Google Scholar</a>
+      <a href="https://github.com/hezhibo">GitHub</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 Zhibo He &middot; Last updated July 2026 &middot; Built with plain HTML/CSS
+</footer>
+
+</body>
+</html>
