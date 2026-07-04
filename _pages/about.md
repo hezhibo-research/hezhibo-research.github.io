@@ -29,3 +29,5 @@ latest_posts:
 I am a master&rsquo;s student in **Security and Resilience: Science and Technology** at Imperial College London, working on program analysis and software testing. My MSc thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focuses on **differential testing**.
 
 My broader interests include differential fuzzing, symbolic execution, software reliability, and LLMs for code and security. Before Imperial, I earned a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
+
+I&rsquo;m always glad to talk about testing, fuzzing, and program analysis &mdash; feel free to drop me an [email](mailto:zh825@ic.ac.uk).
