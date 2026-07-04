@@ -4,95 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zhibo He</title>
-<meta name="description" content="Personal academic homepage of Zhibo He.">
+<meta name="description" content="Zhibo He — MSc student at Imperial College London working on program analysis, software testing, and differential fuzzing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1a1a1a; --muted:#666; --line:#e6e6e6;
-    --accent:#8b1a1a; --bg:#fff; --soft:#fafafa;
-    --maxw:820px;
+    --bg:#fbfaf7;
+    --surface:#ffffff;
+    --ink:#211f1c;
+    --soft:#6c6862;
+    --faint:#9a958d;
+    --line:#e9e5dc;
+    --accent:#7c4a34;      /* muted terracotta */
+    --accent-2:#3f5a4c;    /* deep sage, for hovers */
+    --maxw:720px;
+    --serif:"Newsreader",Georgia,serif;
+    --sans:"Inter",-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#16150f; --surface:#1c1b16; --ink:#eae6dd; --soft:#a9a498;
+      --faint:#78736a; --line:#302e26; --accent:#d19a7f; --accent-2:#9db8a8;
+    }
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     margin:0; background:var(--bg); color:var(--ink);
-    font-family:Georgia,"Times New Roman",serif;
-    line-height:1.65; font-size:17px;
+    font-family:var(--serif); font-size:19px; line-height:1.7;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
-  a{color:var(--accent); text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  ::selection{background:var(--accent); color:#fff}
+  a{color:var(--accent); text-decoration:none;
+    border-bottom:1px solid transparent; transition:border-color .2s,color .2s}
+  a:hover{border-bottom-color:var(--accent); color:var(--accent-2)}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px}
 
-  /* Nav */
-  nav{
-    position:sticky; top:0; z-index:10; background:rgba(255,255,255,.92);
-    backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
-  }
-  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:56px}
-  nav .brand{font-weight:bold; letter-spacing:.02em}
-  nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0;
-    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:14px}
-  nav a{color:var(--ink)}
+  /* Top bar */
+  nav{position:sticky; top:0; z-index:20;
+    background:color-mix(in srgb,var(--bg) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px}
+  nav .brand{font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.03em}
+  nav ul{display:flex; gap:24px; list-style:none; margin:0; padding:0}
+  nav ul a{font-family:var(--sans); font-size:13.5px; letter-spacing:.02em;
+    color:var(--soft); border:none; text-transform:lowercase}
+  nav ul a:hover{color:var(--accent)}
 
   /* Header */
-  header{padding:56px 0 40px}
-  .hero{display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap}
-  .avatar{
-    width:150px; height:150px; border-radius:8px; object-fit:cover;
-    background:var(--soft); border:1px solid var(--line); flex:0 0 auto;
-    display:flex; align-items:center; justify-content:center; color:var(--muted);
-    font-family:-apple-system,Segoe UI,sans-serif; font-size:13px; text-align:center;
-  }
-  .hero-info{flex:1; min-width:260px}
-  h1{margin:0 0 6px; font-size:34px; letter-spacing:.01em}
-  .role{color:var(--muted); margin:0 0 14px; font-size:18px}
-  .contact-line{
-    font-family:-apple-system,Segoe UI,sans-serif; font-size:14px;
-    color:var(--muted); display:flex; flex-wrap:wrap; gap:14px;
-  }
+  header{padding:76px 0 20px}
+  .hero{display:flex; gap:34px; align-items:center; flex-wrap:wrap}
+  .avatar{width:120px; height:120px; border-radius:50%; object-fit:cover; flex:0 0 auto;
+    background:var(--surface); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--faint); font-family:var(--sans); font-size:12px;
+    box-shadow:0 6px 24px rgba(0,0,0,.06)}
+  .hero-info{flex:1; min-width:240px}
+  h1{margin:0 0 6px; font-size:40px; font-weight:500; letter-spacing:-.01em; line-height:1.1}
+  .role{margin:0; color:var(--soft); font-size:18px; font-style:italic; line-height:1.5}
+  .dot{color:var(--faint); margin:0 8px}
 
-  section{padding:34px 0; border-top:1px solid var(--line)}
-  h2{font-size:14px; text-transform:uppercase; letter-spacing:.12em;
-     color:var(--accent); margin:0 0 18px;
-     font-family:-apple-system,Segoe UI,sans-serif; font-weight:600}
-  p{margin:0 0 14px}
+  .intro{padding:34px 0 8px; font-size:20px}
+  .intro p{margin:0 0 20px}
+  .intro p:last-child{margin-bottom:0}
+  .intro em{color:var(--ink); font-style:italic}
+
+  /* Section scaffolding */
+  section{padding:38px 0}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin:0 0 22px}
+  h2{font-family:var(--sans); font-size:12px; font-weight:600; text-transform:uppercase;
+    letter-spacing:.18em; color:var(--accent); margin:0; white-space:nowrap}
+  .sec-head .rule{flex:1; height:1px; background:var(--line)}
 
   /* News */
   .news{list-style:none; margin:0; padding:0}
-  .news li{display:flex; gap:16px; padding:8px 0; border-bottom:1px dotted var(--line)}
-  .news li:last-child{border-bottom:none}
-  .news .date{flex:0 0 92px; color:var(--muted); font-family:-apple-system,Segoe UI,sans-serif;
-    font-size:13px; padding-top:2px}
+  .news li{display:flex; gap:22px; padding:11px 0}
+  .news .date{flex:0 0 96px; color:var(--faint); font-family:var(--sans);
+    font-size:13px; letter-spacing:.02em; padding-top:5px}
+  .news .item{font-size:18px}
 
   /* Publications */
-  .pub{display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--line)}
+  .pub{padding:20px 0; border-bottom:1px solid var(--line)}
   .pub:last-child{border-bottom:none}
-  .pub .thumb{flex:0 0 120px; height:76px; border:1px solid var(--line); border-radius:6px;
-    background:var(--soft); display:flex; align-items:center; justify-content:center;
-    color:var(--muted); font-size:12px; font-family:-apple-system,Segoe UI,sans-serif}
-  .pub-body{flex:1}
-  .pub .ptitle{font-weight:bold}
-  .pub .authors{font-size:15px; color:#333}
-  .pub .authors .me{border-bottom:2px solid var(--accent)}
-  .pub .venue{font-style:italic; color:var(--muted); font-size:15px}
-  .pub .links{margin-top:6px; font-family:-apple-system,Segoe UI,sans-serif; font-size:13px;
-    display:flex; gap:12px; flex-wrap:wrap}
-  .pub .links a{padding:1px 8px; border:1px solid var(--line); border-radius:4px; color:var(--accent)}
+  .pub .ptitle{font-size:20px; font-weight:600; line-height:1.35}
+  .pub .authors{font-size:17px; color:var(--soft); margin-top:3px}
+  .pub .authors .me{color:var(--ink); font-weight:500;
+    border-bottom:1.5px solid var(--accent); padding-bottom:1px}
+  .pub .venue{font-style:italic; color:var(--faint); font-size:17px; margin-top:1px}
+  .pub .links{margin-top:9px; font-family:var(--sans); font-size:12.5px;
+    letter-spacing:.03em; display:flex; gap:18px; flex-wrap:wrap}
+  .pub .links a{color:var(--accent); text-transform:uppercase; border:none}
+  .pub .links a:hover{color:var(--accent-2)}
+
+  /* Projects */
+  .proj{padding:18px 0; border-bottom:1px solid var(--line)}
+  .proj:last-of-type{border-bottom:none}
+  .proj .ptitle{font-size:19px; font-weight:600}
+  .proj .meta{font-family:var(--sans); font-size:12.5px; color:var(--faint);
+    letter-spacing:.02em; margin:2px 0 6px}
+  .proj p{margin:0; font-size:17px; color:var(--soft)}
+  .proj .links{margin-top:6px; font-family:var(--sans); font-size:12px;
+    letter-spacing:.03em; text-transform:uppercase}
 
   /* CV */
-  .cv-item{display:flex; gap:16px; padding:10px 0}
-  .cv-item .yr{flex:0 0 120px; color:var(--muted);
-    font-family:-apple-system,Segoe UI,sans-serif; font-size:14px}
-  .cv-item .what b{display:block}
-  .cv-item .what span{color:var(--muted); font-size:15px}
+  .cv-item{display:flex; gap:22px; padding:13px 0; border-bottom:1px solid var(--line)}
+  .cv-item:last-of-type{border-bottom:none}
+  .cv-item .yr{flex:0 0 128px; color:var(--faint); font-family:var(--sans); font-size:13px; padding-top:4px}
+  .cv-item b{font-weight:600}
+  .cv-item .org{color:var(--soft); font-size:16.5px}
+  .cv-download{margin-top:20px; font-family:var(--sans); font-size:14px}
 
-  footer{padding:40px 0 60px; color:var(--muted);
-    font-family:-apple-system,Segoe UI,sans-serif; font-size:13px; text-align:center;
-    border-top:1px solid var(--line)}
+  /* Contact */
+  .links-row{display:flex; flex-wrap:wrap; gap:22px; font-family:var(--sans); font-size:14px; margin-top:6px}
+  .links-row a{color:var(--soft); border:none; letter-spacing:.02em}
+  .links-row a:hover{color:var(--accent)}
+
+  footer{padding:44px 0 64px; color:var(--faint);
+    font-family:var(--sans); font-size:12.5px; letter-spacing:.03em; text-align:center;
+    border-top:1px solid var(--line); margin-top:20px}
 
   @media (max-width:560px){
-    body{font-size:16px}
-    h1{font-size:28px}
-    .pub .thumb,.news .date{display:none}
+    body{font-size:18px}
+    h1{font-size:32px}
+    .news .date{flex-basis:74px}
+    .news li{gap:14px}
+    .cv-item .yr{flex-basis:96px}
   }
 </style>
 </head>
@@ -100,13 +138,11 @@
 
 <nav>
   <div class="wrap">
-    <span class="brand">Zhibo He</span>
+    <span class="brand">Zhibo&nbsp;He</span>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#research">research</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
   </div>
 </nav>
@@ -115,103 +151,59 @@
 
   <header id="about">
     <div class="hero">
-      <!-- Replace with: <img class="avatar" src="photo.jpg" alt="Zhibo He"> -->
-      <div class="avatar">photo.jpg</div>
+      <img class="avatar" src="photo.jpg" alt="Zhibo He"
+           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',textContent:'photo.jpg'}))">
       <div class="hero-info">
         <h1>Zhibo He</h1>
-        <p class="role">Ph.D. Student, [Department] &middot; [University]</p>
-        <div class="contact-line">
-          <span>&#9993; <a href="mailto:zhiboheee@gmail.com">zhiboheee@gmail.com</a></span>
-          <span>&#128205; [City, Country]</span>
-        </div>
+        <p class="role">MSc Student, Security &amp; Resilience<span class="dot">·</span>Imperial College London</p>
       </div>
     </div>
-    <p style="margin-top:28px">
-      I am a Ph.D. student at [University], where I work on [your research area].
-      My research focuses on [one or two sentences describing your core research questions
-      and why they matter]. Previously, I received my [degree] from [institution].
-    </p>
-    <p>
-      I am broadly interested in [interest 1], [interest 2], and [interest 3].
-      I am currently looking for [collaborations / internships / etc.] &mdash; feel free to reach out.
-    </p>
   </header>
 
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><span class="date">Jul 2026</span><span>New paper accepted at [Venue]. &#127881;</span></li>
-      <li><span class="date">May 2026</span><span>Started as a research intern at [Lab / Company].</span></li>
-      <li><span class="date">Jan 2026</span><span>Gave a talk on [topic] at [event].</span></li>
-    </ul>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <div class="pub">
-      <div class="thumb">figure</div>
-      <div class="pub-body">
-        <div class="ptitle">Title of Your First Paper Goes Here</div>
-        <div class="authors"><span class="me">Zhibo He</span>, Co-author A, Co-author B</div>
-        <div class="venue">Conference / Journal Name, 2026</div>
-        <div class="links">
-          <a href="#">PDF</a><a href="#">arXiv</a><a href="#">Code</a><a href="#">BibTeX</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="thumb">figure</div>
-      <div class="pub-body">
-        <div class="ptitle">Title of Your Second Paper Goes Here</div>
-        <div class="authors">Co-author A, <span class="me">Zhibo He</span>, Co-author C</div>
-        <div class="venue">Conference / Journal Name, 2025</div>
-        <div class="links">
-          <a href="#">PDF</a><a href="#">arXiv</a><a href="#">Code</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <section id="cv">
-    <h2>Education &amp; Experience</h2>
-    <div class="cv-item">
-      <div class="yr">2024 &ndash; now</div>
-      <div class="what"><b>Ph.D. in [Field]</b><span>[University]</span></div>
-    </div>
-    <div class="cv-item">
-      <div class="yr">2020 &ndash; 2024</div>
-      <div class="what"><b>B.S. in [Field]</b><span>[University]</span></div>
-    </div>
-    <div class="cv-item">
-      <div class="yr">Summer 2025</div>
-      <div class="what"><b>Research Intern</b><span>[Lab / Company]</span></div>
-    </div>
-    <p style="margin-top:18px">
-      <a href="cv.pdf">&#8595; Download full CV (PDF)</a>
+  <div class="intro">
+    <p>
+      I am a master&rsquo;s student in <em>Security and Resilience: Science and Technology</em>
+      at Imperial College London. I work on program analysis and software testing &mdash;
+      currently my <a href="#research">MSc thesis</a> on differential testing, supervised by
+      Prof.&nbsp;<a href="https://www.doc.ic.ac.uk/~cristic/">Cristian&nbsp;Cadar</a>.
     </p>
+    <p>
+      My interests span program analysis, software testing, differential fuzzing, symbolic
+      execution, software reliability, AI-assisted program reasoning, and LLMs for code and
+      security. Previously I completed a BSc in Information
+      Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University
+      (First Class Honours, departmental top 5%). The best way to reach me is
+      <a href="mailto:zh825@ic.ac.uk">by email</a>.
+    </p>
+  </div>
+
+  <section id="research">
+    <div class="sec-head"><h2>Research</h2><div class="rule"></div></div>
+
+    <div class="proj">
+      <div class="ptitle">MSc Thesis: Differential Testing</div>
+      <div class="meta">Imperial College London · Apr 2026 – present · Prof. <a href="https://www.doc.ic.ac.uk/~cristic/">Cristian Cadar</a></div>
+      <p>Ongoing thesis work on differential testing; more details to follow.</p>
+    </div>
+
+    <div class="cv-download"><a href="cv.pdf">Download full CV (PDF) &rarr;</a></div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email is the best way to reach me:
-      <a href="mailto:zhiboheee@gmail.com">zhiboheee@gmail.com</a>.
-    </p>
-    <div class="contact-line" style="font-size:14px">
+    <div class="sec-head"><h2>Elsewhere</h2><div class="rule"></div></div>
+    <div class="links-row">
+      <a href="mailto:zh825@ic.ac.uk">Email</a>
       <a href="#">Google Scholar</a>
-      <a href="https://github.com/hezhibo">GitHub</a>
-      <a href="#">Twitter / X</a>
+      <a href="https://github.com/hezhibo-research">GitHub</a>
       <a href="#">LinkedIn</a>
+      <a href="#">ORCID</a>
     </div>
   </section>
 
 </div>
 
 <footer>
-  &copy; 2026 Zhibo He &middot; Last updated July 2026 &middot; Built with plain HTML/CSS
+  © 2026 Zhibo He — last updated July 2026
 </footer>
 
 </body>
