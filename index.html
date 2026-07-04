@@ -125,6 +125,32 @@
     font-family:var(--sans); font-size:12.5px; letter-spacing:.03em; text-align:center;
     border-top:1px solid var(--line); margin-top:20px}
 
+  /* Cards & depth */
+  .card{position:relative; background:var(--surface); border:1px solid var(--line);
+    border-radius:14px; padding:22px 24px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03), 0 10px 30px rgba(0,0,0,.05);
+    transition:transform .2s ease, box-shadow .2s ease}
+  .card:hover{transform:translateY(-2px);
+    box-shadow:0 2px 4px rgba(0,0,0,.05), 0 18px 44px rgba(0,0,0,.09)}
+  .card + .card{margin-top:16px}
+  .card.feature{border-left:3px solid var(--accent)}
+  .tag{display:inline-block; font-family:var(--sans); font-size:10.5px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--accent);
+    background:color-mix(in srgb,var(--accent) 13%, transparent);
+    padding:3px 10px; border-radius:999px; margin-bottom:13px}
+  .card .ptitle{font-size:20px; font-weight:600; line-height:1.35}
+  .card .meta{font-family:var(--sans); font-size:12.5px; color:var(--faint);
+    letter-spacing:.02em; margin:3px 0 9px}
+  .card p{margin:0; font-size:17px; color:var(--soft)}
+  .card .authors{font-size:16px; color:var(--soft); margin-top:4px}
+  .card .authors .me{color:var(--ink); font-weight:500;
+    border-bottom:1.5px solid var(--accent); padding-bottom:1px}
+  .card .venue{font-style:italic; color:var(--faint); font-size:16px; margin-top:2px}
+  .card .links{margin-top:11px; font-family:var(--sans); font-size:12.5px;
+    letter-spacing:.03em; display:flex; gap:18px; flex-wrap:wrap}
+  .card .links a{color:var(--accent); text-transform:uppercase; border:none}
+  .card .links a:hover{color:var(--accent-2)}
+
   @media (max-width:560px){
     body{font-size:18px}
     h1{font-size:32px}
@@ -181,8 +207,9 @@
   <section id="research">
     <div class="sec-head"><h2>Research</h2><div class="rule"></div></div>
 
-    <div class="proj">
-      <div class="ptitle">MSc Thesis: Differential Testing</div>
+    <div class="card feature">
+      <span class="tag">MSc Thesis · Featured</span>
+      <div class="ptitle">Differential Testing</div>
       <div class="meta">Imperial College London · Apr 2026 – present · Prof. <a href="https://www.doc.ic.ac.uk/~cristic/">Cristian Cadar</a></div>
       <p>Ongoing thesis work on differential testing; more details to follow.</p>
     </div>
@@ -191,7 +218,7 @@
 
   <section id="publications">
     <div class="sec-head"><h2>Publications</h2><div class="rule"></div></div>
-    <div class="pub">
+    <div class="card">
       <div class="ptitle">Unrevealed Threats: A Comprehensive Study of the Adversarial Robustness of Underwater Image Enhancement Models</div>
       <div class="authors">S. Zhai, <span class="me">Zhibo He</span>, X. Cong, J. Hou, J. Gui, J. W. You, X. Gong, J. T.-Y. Kwok, Y. Y. Tang</div>
       <div class="venue">IEEE Transactions on Multimedia, vol. 27, pp. 9532&ndash;9541, 2025</div>
