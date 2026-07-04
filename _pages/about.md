@@ -30,4 +30,4 @@ I am a master&rsquo;s student in **Security and Resilience: Science and Technolo
 
 My broader interests include differential fuzzing, symbolic execution, software reliability, and LLMs for code and security. Before Imperial, I earned a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
 
-I&rsquo;m always glad to talk about testing, fuzzing, and program analysis &mdash; feel free to drop me an [email](mailto:zh825@ic.ac.uk).
+I&rsquo;m always happy to connect &mdash; feel free to drop me an [email](mailto:zh825@ic.ac.uk).
