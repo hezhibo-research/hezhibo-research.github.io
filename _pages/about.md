@@ -2,14 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: MSc Student, <a href='https://www.imperial.ac.uk/computing/'>Imperial College London</a>. Program analysis · software testing · differential testing.
+subtitle: MSc Student · <a href='https://www.imperial.ac.uk/computing/'>Imperial College London</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Computing</p>
     <p>Imperial College London</p>
     <p>London, UK</p>
 
@@ -27,8 +26,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a master&rsquo;s student in **Security and Resilience: Science and Technology** at Imperial College London. I work on program analysis and software testing &mdash; currently my MSc thesis on **differential testing**, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/).
+I am a master&rsquo;s student in **Security and Resilience: Science and Technology** at Imperial College London, working on program analysis and software testing. My MSc thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focuses on **differential testing**.
 
-My interests span program analysis, software testing, differential fuzzing, symbolic execution, software reliability, AI-assisted program reasoning, and LLMs for code and security. Previously I completed a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
+My broader interests include differential fuzzing, symbolic execution, software reliability, and LLMs for code and security. Before Imperial, I earned a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
 
 The best way to reach me is by [email](mailto:zh825@ic.ac.uk).
