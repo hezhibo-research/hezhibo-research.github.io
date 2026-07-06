@@ -6,8 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Zhibo
 middle_name:
 last_name: He
-contact_note: >
-  The best way to reach me is by email.
+contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zhibo He (贺之博) — MSc student in Security and Resilience at Imperial College London, working on program analysis, software testing, and differential testing.
 footer_text: >

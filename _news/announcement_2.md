@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Began the MSc in Security and Resilience: Science and Technology at Imperial College London.
+Began the MSc at Imperial College London.
