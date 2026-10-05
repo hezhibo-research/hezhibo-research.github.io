@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming PhD student in Computer Science at the School of Computing, National University of Singapore, starting in January 2027 under the supervision of [Prof. Abhik Roychoudhury](https://abhikrc.com/). Since September 2026 I have been a research attachment in his group, working on program analysis and software testing. Before that, I completed my MSc at Imperial College London, where my thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focused on **differential testing**.
+I am an incoming PhD student in Computer Science at the School of Computing, National University of Singapore, starting in January 2027 under the supervision of [Prof. Abhik Roychoudhury](https://abhikrc.com/). My research focuses on **AI for software engineering**. Since September 2026 I have been a research attachment in his group. Before that, I completed my MSc at Imperial College London, where my thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focused on **differential testing**.
 
 My broader interests include differential fuzzing, symbolic execution, software reliability, and LLMs for code and security. Before Imperial, I earned a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
 

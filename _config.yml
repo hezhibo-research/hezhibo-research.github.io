@@ -8,7 +8,7 @@ middle_name:
 last_name: He
 contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Zhibo He (贺之博) — incoming PhD student in Computer Science at NUS School of Computing (from January 2027), advised by Prof. Abhik Roychoudhury, working on program analysis, software testing, and differential testing.
+  Zhibo He (贺之博) — incoming PhD student in Computer Science at NUS School of Computing (from January 2027), advised by Prof. Abhik Roychoudhury, working on AI for software engineering, program analysis, and software testing.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
