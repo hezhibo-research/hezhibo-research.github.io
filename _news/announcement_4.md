@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Admitted to the PhD programme in Computer Science at [NUS School of Computing](https://www.comp.nus.edu.sg/), starting January 2027 (Semester 2, AY2026/27). I will be advised by [Prof. Abhik Roychoudhury](https://abhikrc.com/).
+Admitted to the PhD programme in Computer Science at [NUS School of Computing](https://www.comp.nus.edu.sg/), starting January 2027 under the supervision of [Prof. Abhik Roychoudhury](https://abhikrc.com/).
