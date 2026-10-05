@@ -2,15 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: MSc Student · <a href='https://www.imperial.ac.uk/computing/'>Imperial College London</a>
+subtitle: Incoming PhD Student · <a href='https://www.comp.nus.edu.sg/'>National University of Singapore</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Imperial College London</p>
-    <p>London, UK</p>
+    <p>National University of Singapore</p>
+    <p>Singapore</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a master&rsquo;s student at Imperial College London, working on program analysis and software testing. My MSc thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focuses on **differential testing**.
+I am an incoming PhD student at the National University of Singapore, where I will be advised by [Prof. Abhik Roychoudhury](https://abhikrc.com/). Since September 2026 I have been a research attachment in his group, working on program analysis and software testing. Before that, I completed my MSc at Imperial College London, where my thesis, supervised by [Prof. Cristian Cadar](https://www.doc.ic.ac.uk/~cristic/), focused on **differential testing**.
 
 My broader interests include differential fuzzing, symbolic execution, software reliability, and LLMs for code and security. Before Imperial, I earned a BSc in Information Management and Information Systems at Xi&rsquo;an Jiaotong-Liverpool University (First Class Honours, departmental top 5%).
 
